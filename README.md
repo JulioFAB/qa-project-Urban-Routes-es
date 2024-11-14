@@ -21,4 +21,5 @@ Puedes ejecutar las pruebas desde la terminal con el comando:
 - o dando clic en el boton run python test 
 
  Sprint 8 
- Julio Fernando Aguilar Becerra grupo 14 
+grupo 14
+ Julio Fernando Aguilar Becerra  

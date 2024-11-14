@@ -73,7 +73,6 @@ class TestUrbanRoutes:
         agregar_manta_panuelos.pedir_manta_panuelos()
 
 
-
     def test_pedir_helado(self):
         self.routes_page.pedir_helado()
 
