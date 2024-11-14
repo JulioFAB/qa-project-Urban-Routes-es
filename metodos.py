@@ -6,7 +6,6 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-
 #Metodos
 class UrbanRoutesPage:
 
@@ -29,8 +28,6 @@ class UrbanRoutesPage:
         self.numero_de_tarjeta = localizadores.UrbanRoutesPage.numero_de_tarjeta
         self.codigo_de_tarjeta = localizadores.UrbanRoutesPage.codigo_de_tarjeta
         self.agregar = localizadores.UrbanRoutesPage.agregar
-        #me falta el clic para cerrar la ventana de metodo de pago
-
         self.mensaje_al_conductor = localizadores.UrbanRoutesPage.mensaje_para_conductor
         self.manta_panuelos = localizadores.UrbanRoutesPage.manta_panuelos
         self.helado = localizadores.UrbanRoutesPage.helado
@@ -56,9 +53,6 @@ class UrbanRoutesPage:
         self.set_from(data.address_from)
         self.set_to(data.address_to)
 
-
-    '''def insert_phone_number(self):
-        self.driver.find_element(*self.campo_introduce_numero_telefono).send_keys(data.phone_number)'''
 
     def insert_phone_number(self):
         phone_field = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(self.campo_introduce_numero_telefono))

@@ -16,7 +16,6 @@ class UrbanRoutesPage:
     agregar_tarjeta = (By.CLASS_NAME, 'pp-plus-container')
     numero_de_tarjeta = (By.CLASS_NAME, 'card-number-input')
     codigo_de_tarjeta = (By.CLASS_NAME, 'card-code-input')
-    card_space = (By.CSS_SELECTOR, '.plc')
     agregar = (By.CLASS_NAME, 'button full')
     cerrar_ventana_metodo_pago = (By.CLASS_NAME, 'close-button section-close')
     mensaje_para_conductor = (By.ID, 'comment')

@@ -1,7 +1,6 @@
 import data
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-
 import metodos
 from metodos import UrbanRoutesPage
 
@@ -66,8 +65,6 @@ class TestUrbanRoutes:
         self.routes_page.agregar_tarjeta()
         self.routes_page.codigo_de_tarjeta()
 
-
-
     def test_enviar_mensaje_conductor(self):
         self.routes_page.enviar_mensaje_al_conductor()
 
@@ -75,7 +72,7 @@ class TestUrbanRoutes:
         agregar_manta_panuelos = metodos.UrbanRoutesPage(cls.driver)
         agregar_manta_panuelos.pedir_manta_panuelos()
 
-         #self.routes_page.pedir_manta_panuelos()
+
 
     def test_pedir_helado(self):
         self.routes_page.pedir_helado()

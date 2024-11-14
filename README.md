@@ -18,5 +18,7 @@ Ademas deben instalar SELENIUM el cual se puede instalar desde el python packege
 Para ejecutar las pruebas se necesita abrir el archivo main.py y actualizar la URL en el archivo data.py
 Puedes ejecutar las pruebas desde la terminal con el comando:
 - pytest main.py
+- o dando clic en el boton run python test 
 
-Julio Fernando Aguilar Becerra Sprint 8 
+ Sprint 8 
+ Julio Fernando Aguilar Becerra grupo 14 
