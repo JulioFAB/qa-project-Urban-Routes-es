@@ -19,4 +19,5 @@ Para ejecutar las pruebas se necesita abrir el archivo main.py y actualizar la U
 Puedes ejecutar las pruebas desde la terminal con el comando:
 - pytest main.py
 
-Julio Fernando Aguilar Becerra Sprint 8 
+ Sprint 8 
+ Julio Fernando Aguilar Becerra grupo 14 

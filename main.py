@@ -1,7 +1,6 @@
 import data
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-
 import metodos
 from metodos import UrbanRoutesPage
 
@@ -75,7 +74,7 @@ class TestUrbanRoutes:
         agregar_manta_panuelos = metodos.UrbanRoutesPage(cls.driver)
         agregar_manta_panuelos.pedir_manta_panuelos()
 
-         #self.routes_page.pedir_manta_panuelos()
+
 
     def test_pedir_helado(self):
         self.routes_page.pedir_helado()
