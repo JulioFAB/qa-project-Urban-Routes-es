@@ -1,8 +1,8 @@
 import data
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-import metodos
 from metodos import UrbanRoutesPage
+import localizadores
 
 # no modificar
 def retrieve_phone_code(driver) -> str:
@@ -56,25 +56,31 @@ class TestUrbanRoutes:
 
     def test_seleccionar_tarifa_confort(self):
         self.routes_page.select_tarifa_confort()
+        tarifa_element = self.driver.find_element(*localizadores.UrbanRoutesPage.tarifa_confort)
+        assert "active" in tarifa_element.get_attribute("class")
 
     def test_insertar_numero_telefono(self):
         self.routes_page.insert_phone_number()
-
+        assert self.routes_page.obtener_numero_telefono() == data.phone_number
 
     def test_agregar_tarjeta(self):
         self.routes_page.agregar_tarjeta()
         self.routes_page.codigo_de_tarjeta()
+        assert self.routes_page.tarjeta_agregada_exitosamente() == data.card_number
 
     def test_enviar_mensaje_conductor(self):
         self.routes_page.enviar_mensaje_al_conductor()
+        assert self.routes_page.obtener_mensaje_enviado() == data.message_for_driver
 
-    def test_pedir_manta_panuelos(cls):      #cambie self por cls
-        agregar_manta_panuelos = metodos.UrbanRoutesPage(cls.driver)
-        agregar_manta_panuelos.pedir_manta_panuelos()
-
+    def test_pedir_manta_panuelos(self):
+        self.routes_page.pedir_manta_panuelos()
+        slider = self.driver.find_element(*localizadores.UrbanRoutesPage.manta_panuelos)
+        assert "r-sw" in slider.get_attribute("class")
 
     def test_pedir_helado(self):
         self.routes_page.pedir_helado()
+        contador = self.driver.find_element(*localizadores.UrbanRoutesPage.helado)
+        assert "counter-plus" in contador.get_attribute("class")
 
     def test_confirmar_reserva(self):
         self.routes_page.confirmar_reserva()

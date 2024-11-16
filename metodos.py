@@ -9,9 +9,7 @@ from selenium.webdriver.support import expected_conditions as EC
 #Metodos
 class UrbanRoutesPage:
 
-
     def __init__(self, driver):
-
 
         self.driver = driver
         self.from_field = localizadores.UrbanRoutesPage.from_field
@@ -65,8 +63,6 @@ class UrbanRoutesPage:
     def select_tarifa_confort(self):
         WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(self.clic_tarifa_confort)).click()
 
-
-
     def agregar_tarjeta(self):
         WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable(self.clic_boton_metodo_de_pago)
@@ -114,6 +110,39 @@ class UrbanRoutesPage:
     def set_route(self, from_address, to_address):
         self.set_from(from_address)
         self.set_to(to_address)
+
+
+    #ASSERT
+
+    def tarifa_seleccionada(self):
+        # Devuelve el texto o valor que indica la tarifa seleccionada.
+        return self.driver.find_element(*self.clic_tarifa_confort).text
+
+    def obtener_numero_telefono(self):
+        # Devuelve el número de teléfono actualmente ingresado.
+        return self.driver.find_element(*self.campo_introduce_numero_telefono).get_property('value')
+
+    def tarjeta_agregada_exitosamente(self):
+        # Lógica para verificar si la tarjeta fue agregada correctamente.
+        return "Tarjeta agregada" in self.driver.page_source
+
+    def obtener_mensaje_enviado(self):
+        # Devuelve el mensaje enviado al conductor.
+        return self.driver.find_element(*self.mensaje_al_conductor).get_property('value')
+
+    def manta_panuelos_seleccionados(self):
+        # Verifica que la opción de manta y pañuelos fue seleccionada.
+        return self.driver.find_element(*self.manta_panuelos).is_selected()
+
+    def helado_pedido(self):
+        # Verifica que el helado fue pedido correctamente.
+        return self.driver.find_element(*self.helado).is_selected()
+
+    def reserva_confirmada(self):
+        # Verifica que la reserva fue confirmada correctamente.
+        return "Reserva confirmada" in self.driver.page_source
+
+
 
 
 
