@@ -28,4 +28,4 @@ Puedes ejecutar las pruebas desde la terminal con el comando:
 
  Sprint 8 
 grupo 14
- Julio Fernando Aguilar Becerra  
+ Julio Fernando Aguilar Becerra
