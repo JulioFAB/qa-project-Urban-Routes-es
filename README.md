@@ -1,12 +1,18 @@
 # NOMBRE DEL PROYECTO: qa-project-Urban-Routes-es
 
+# PRUEBAS AUTOMATIZADAS DEL PROCESO DE SOLICITAR UN TAXI EN LA APLICACIÓN URBAN ROUTES
+fecha ( 11/2024)
 
-# PRUEBAS AUTOMATIZADAS DEL PROCESO DE SOLICITAR UN TAXI EN LA APLICACION URBAN ROUTES
+El propósito del proyecto era realizar 8 pruebas automatizadas para todo el proceso de solicitar un taxi en la aplicación, incluyendo detalles de viaje.
 
-Se realizaron 8 pruebas para todo el proceso de solicitar un taxi en la aplicacion, incluyendo detalles de viaje. Las pruebas abarcan:
-- Llenado de campos
-- Click en botones 
-- Eleccion de opciones
+Para este proyecto utilice: Pycharm , Python , Selenium , GitHub, JIRA.
+
+- Realice pruebas de llenado de campos.
+- Programé localizadores para poder hacer click en botones. 
+- Ejecuté pruebas para la selección de diferentes opciones de viaje. 
+
+Logré encontrar fallas en la aplicación que reporte a través de JIRA 
+
 
 ## Instalación
 
@@ -26,6 +32,5 @@ Puedes ejecutar las pruebas desde la terminal con el comando:
 - pytest main.py
 - o dando clic en el boton run python test 
 
- Sprint 8 
-grupo 14
- Julio Fernando Aguilar Becerra
+ 
+ 
